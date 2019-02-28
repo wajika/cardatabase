@@ -1,8 +1,8 @@
 package com.packt.cardatabase.domain;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RepositoryRestResource
 public interface OwnerRepository extends CrudRepository<Owner, Long> {
 }
