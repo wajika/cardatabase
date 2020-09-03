@@ -12,7 +12,7 @@ ENV JAVA_OPTS="-javaagent:/data/cardatabase/elastic-apm-agent-1.18.0.RC1.jar -De
 COPY . /data/cardatabase
 WORKDIR /data/cardatabase
 
-RUN ["mvn", "clean", "install"]
+RUN ["mvn", "clean", "install","-DskipTests"]
 
 EXPOSE 8080
 
