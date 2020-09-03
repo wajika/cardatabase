@@ -7,7 +7,7 @@ RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binari
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 ENV MAVEN_HOME /usr/share/maven
-ENV JAVA_OPTS="-javaagent:/data/cardatabase/elastic-apm-agent-1.18.0.RC1.jar -Delastic.apm.service_name=springboot -Delastic.apm.application_packages=org.example,org.another.example -Delastic.apm.server_urls=http://192.168.10.145:8200"
+ENV JAVA_OPTS="-javaagent:/data/cardatabase/elastic-apm-agent-1.18.0.RC1.jar -Delastic.apm.service_name=cardatabase -Delastic.apm.application_packages=org.example,org.another.example -Delastic.apm.server_urls=https://apmserver.lonsid.cn"
 
 COPY . /data/cardatabase
 WORKDIR /data/cardatabase
